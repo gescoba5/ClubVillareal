@@ -4,22 +4,27 @@
 section.module:last-child {
   margin-bottom: 0;
 }
+
 section.module h2 {
   margin-bottom: 40px;
   font-family: "Roboto Slab", serif;
   font-size: 30px;
 }
+
 section.module p {
   margin-bottom: 40px;
   font-size: 16px;
   font-weight: 300;
 }
+
 section.module p:last-child {
   margin-bottom: 0;
 }
+
 section.module.content {
   padding: 40px 0;
 }
+
 section.module.parallax {
   height: 600px;
   background-position: 50% 50%;
@@ -30,6 +35,7 @@ section.module.parallax {
   -o-background-size: cover;
   background-size: cover;
 }
+
 section.module.parallax h1 {
   color: rgba(255, 255, 255, 0.8);
   font-size: 48px;
@@ -39,6 +45,7 @@ section.module.parallax h1 {
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 section.module.parallax-1 {
   background-image: url("../img/1.jpg");
 }
@@ -47,13 +54,16 @@ section.module.parallax-1 {
   section.module h2 {
     font-size: 42px;
   }
+
   section.module p {
     font-size: 20px;
   }
+
   section.module.parallax h1 {
     font-size: 96px;
   }
 }
+
 @media all and (min-width: 960px) {
   section.module.parallax h1 {
     font-size: 160px;
@@ -130,4 +140,36 @@ input {
 
 .fa-futbol-o {
 	color: white;
+}
+
+@media (min-width: 300px) and (max-width: 384px) {
+  .logo-brand {
+    margin-left: 50px;
+    margin-top: -50px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 767px) {
+  .img-brand {
+    width: 35px;
+    height: 54px;
+    margin-top: -16px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .title {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+  .title {
+    margin-top: 30px;
+  }
+}
+
+#gmap_canvas img {
+  max-width: none !important;
+  background: none !important;
 }

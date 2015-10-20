@@ -1,5 +1,4 @@
 <?php
-    
     @session_start();
 
     if ((isset($_SESSION["autentica"])?$_SESSION["autentica"]:NULL) != "SIP") {
@@ -7,5 +6,4 @@
                    window.location.href=\"../index.html\"</script>";
 	    exit();
     }
-
 ?>
