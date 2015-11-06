@@ -1,9 +1,10 @@
 <?php
 	include ("datos_conexion.php");
 
-	$connection = mysql_connect("$host", "$usuario", "$password") or die
-		("Error conectando a la base de datos");
+	$connection = mysqli_connect("$host", "$usuario", "$password", "$DB");
 
-	$db = mysql_select_db("$DB", $connection) or die
-		("Error seleccionando la base de datos");
+	if ($connection->connect_error) {
+    die ('Connect Error (' . $connection->connect_errno . ') '
+      . $connection->connect_error);
+	}
 ?>

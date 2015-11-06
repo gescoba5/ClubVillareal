@@ -102,6 +102,10 @@ section.module.parallax-1 {
     padding: 20px 10px;
 }
 
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+  max-height: 380px;
+}
+
 .carousel-indicators li {
     border: 1px solid #1B70B7;
 }
@@ -172,4 +176,9 @@ input {
 #gmap_canvas img {
   max-width: none !important;
   background: none !important;
+}
+
+.nombre {
+  padding: 10px 10px 0px;
+  font-size: 12px;
 }

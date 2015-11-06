@@ -60,6 +60,7 @@ $(function() {
           },
         })
     },
+    
     filter: function() {
       return $(this).is(":visible");
     },

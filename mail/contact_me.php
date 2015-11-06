@@ -19,10 +19,10 @@
 	$to = 'gescobaruribe@gmail.com';
 	$email_subject = "Mensaje de contacto Villareal:  $name";
 	$email_body = "Has recibido un nuevo mensaje desde ClubVillarealMedellin.com."
-		."\n\nEstos son los detalles:\n\nName: $name\n\nEmail: $email_address"
-		."\n\nPhone: $phone\n\nMessage:\n$message";
+		."\n\nEstos son los detalles:\n\nNombre: $name\n\nE-mail: $email_address"
+		."\n\nTeléfono: $phone\n\nMensaje:\n$message";
 	$headers = "From: noreply@clubvillarealmedellin.com\n";
 	$headers .= "Reply-To: $email_address";	
-	mail($to,$email_subject,$email_body,$headers);
+	mail($to, $email_subject, $email_body, $headers);
 	return true;			
 ?>

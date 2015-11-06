@@ -1,4 +1,4 @@
-<?php include("../util/seguridad.php");?>
+<?php include("../control/seguridad.php");?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sitio Web del Club Villareal Medellín">
+    <meta name="Description" content="Sitio Web del Club Villareal Medellín">
     <meta name="author" content="Giovanny Escobar Uribe">
     
     <title>Club Villareal Medellín</title>
@@ -64,16 +64,14 @@
               <a href="#profes">+Profes</a>
             </li>
             
-            <!-- Pagos
             <li class="page-scroll">
               <a href="#pagos">Pagos</a>
             </li>
-            -->
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-            <div style="padding-left: 10px">
-              <strong><?php echo $_SESSION["usuarioActual"];?> </strong><br>
+          <ul class="nav navbar-nav navbar-right nombre">
+            <div>
+              <a href="#" style="color: #2C3E50"><strong><?php echo $_SESSION["usuarioActual"];?></strong></a><br>
               <a href="../util/logout.php">Salir</a>
             </div>
           </ul>
