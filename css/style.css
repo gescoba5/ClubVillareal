@@ -25,31 +25,6 @@ section.module.content {
   padding: 40px 0;
 }
 
-section.module.parallax {
-  height: 600px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-section.module.parallax h1 {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 48px;
-  line-height: 600px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-section.module.parallax-1 {
-  background-image: url("../img/1.jpg");
-}
-
 @media all and (min-width: 600px) {
   section.module h2 {
     font-size: 42px;
@@ -58,16 +33,6 @@ section.module.parallax-1 {
   section.module p {
     font-size: 20px;
   }
-
-  section.module.parallax h1 {
-    font-size: 96px;
-  }
-}
-
-@media all and (min-width: 960px) {
-  section.module.parallax h1 {
-    font-size: 160px;
-  }
 }
 
 /* ============================================================
@@ -75,31 +40,31 @@ section.module.parallax-1 {
 ============================================================ */
 
 .navbar-default {
-    background-color: #E5B243;
+  background-color: #E5B243;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #DAA520;
+  background-color: #DAA520;
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #DAA520;
+  border-color: #DAA520;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    background-color: #DAA520;
+  background-color: #DAA520;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #1B70B7;
+  color: #1B70B7;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #1B70B7;
+  color: #1B70B7;
 }
 
 .nav > li > a {
-    padding: 20px 10px;
+  padding: 20px 10px;
 }
 
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
@@ -107,43 +72,47 @@ section.module.parallax-1 {
 }
 
 .carousel-indicators li {
-    border: 1px solid #1B70B7;
+  border: 1px solid #1B70B7;
 }
 
 .carousel-indicators .active {
-    background-color: #E5B243;
+  background-color: #E5B243;
 }
 
 .btn-success {
-    background-color: #1B70B7;
-    border-color: #1B70B7;
+  background-color: #1B70B7;
+  border-color: #1B70B7;
 }
 
 .btn-success:hover {
-    background-color: #2b4fc7;
-    border-color: #263E8F;
+  background-color: #2b4fc7;
+  border-color: #263E8F;
 }
 
 .btn-success:focus, .btn-success.focus {
-    background-color: #3031C9;
-    border-color: #0A0A48;
+  background-color: #3031C9;
+  border-color: #0A0A48;
 }
 
 .scroll-top .btn {
-    line-height: 22px;
-	padding-left: 28%;
+  line-height: 22px;
+  padding-left: 28%;
 }
 
 input {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .portfolio-modal .modal-content {
-    padding: 50px 0px;
+  padding: 50px 0px;
 }
 
 .fa-futbol-o {
-	color: white;
+  color: white;
+}
+
+.img-brand {
+  margin-top: -20px;
 }
 
 @media (min-width: 300px) and (max-width: 384px) {
@@ -173,12 +142,26 @@ input {
   }
 }
 
+.gmap {
+  text-align: left;
+  color: #000;
+}
+
 #gmap_canvas img {
   max-width: none !important;
   background: none !important;
 }
 
-.nombre {
+.divNombre {
   padding: 10px 10px 0px;
   font-size: 12px;
+}
+
+.salida {
+  color: #fff;
+}
+
+.vinculo:hover {
+  color: #2C3E50;
+  text-decoration: none;
 }

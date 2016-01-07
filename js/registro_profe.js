@@ -1,6 +1,5 @@
 $(function() {
-
-  $('form[name="sentMessage"]').find("input,textarea").not('[type=submit]').jqBootstrapValidation({
+  $('form[name="registroProfe"]').find("input").not('[type=submit]').jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
       // additional error messages or events
@@ -10,27 +9,27 @@ $(function() {
       // Prevent spam click and default submit behaviour
       $("#btnSubmit").attr("disabled", true);
       event.preventDefault();
-
+      
       // get values from FORM
       var name      = $("input#name").val();
-      var email     = $("input#email").val();
-      var phone     = $("input#phone").val();
-      var message   = $("textarea#message").val();
-      var firstName = name; // For Success/Failure Message
-
-      // Check for white space in name for Success/Fail message
+      var lastName  = $("input#lastName").val();
+      var user      = $("input#user").val();
+      var password  = $("input#password").val();
+      var firstName = name; // For Success/Failure record
+      
+      // Check for white space in name for Success/Fail record
       if (firstName.indexOf(' ') >= 0) {
         firstName = name.split(' ').slice(0, -1).join(' ');
       }
 
       $.ajax({
-        url: "././util/contact_me.php",
+        url: "../util/registro_profe.php",
         type: "POST",
         data: {
           name: name,
-          phone: phone,
-          email: email,
-          message: message
+          lastName: lastName,
+          user: user,
+          password: password
         },
 
         cache: false,
@@ -41,12 +40,12 @@ $(function() {
           $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
           $('#success > .alert-success')
-            .append("<strong>Su mensaje ha sido enviado exitosamente. </strong>");
+            .append("<strong>El nuevo profe ha sido guardado exitosamente. </strong>");
           $('#success > .alert-success')
             .append('</div>');
 
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $('#profeForm').trigger("reset");
         },
 
         error: function() {
@@ -54,10 +53,10 @@ $(function() {
           $('#success').html("<div class='alert alert-danger'>");
           $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
-          $('#success > .alert-danger').append("<strong>Lo siento " + firstName + ", parece que el mensaje no pudo ser enviado, inténtalo de nuevo.");
+          $('#success > .alert-danger').append("<strong>Lo siento, parece que " + firstName + " no pudo ser guardado como nuevo profe.");
           $('#success > .alert-danger').append('</div>');
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $('#profeForm').trigger("reset");
         },
       })
     },
@@ -68,12 +67,12 @@ $(function() {
   });
 
   $("a[data-toggle=\"tab\"]").click(function(e) {
-    e.preventDefault();
-    $(this).tab("show");
+      e.preventDefault();
+      $(this).tab("show");
   });
 });
 
 // When clicking on Full hide fail/success boxes
 $('#name').focus(function() {
-  $('#success').html('');
+    $('#success').html('');
 });
