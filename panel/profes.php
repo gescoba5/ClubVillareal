@@ -11,7 +11,7 @@
 
     <title>Club Villareal Medellín</title>
 
-    <link rel="shortcut icon" type="image/png" href="../favicon.png" />
+    <link href="../favicon.png" type="image/png" rel="shortcut icon" />
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
@@ -102,24 +102,28 @@
             <form name="registroProfe" id="profeForm" novalidate>
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
-                  <label>Nombre</label>
+                  <label>Nombres</label>
                   <input type="text"
-                    class="form-control"
-                    placeholder="Nombre"
-                    id="name"
-                    required data-validation-required-message="Por favor ingrese un nombre">
+                         class="form-control"
+                         placeholder="Nombres"
+                         id="name"
+                         title="Los nombres solo pueden contener letras"
+                         pattern="[A-Za-zÑñÁÉÍÓÚáéíóú ]{1,}"
+                         required data-validation-required-message="Por favor ingrese los nombres">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
 
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
-                  <label>Apellido</label>
+                  <label>Apellidos</label>
                   <input type="text"
-                    class="form-control"
-                    placeholder="Apellido"
-                    id="lastName"
-                    required data-validation-required-message="Por favor ingrese un apellido">
+                         class="form-control"
+                         placeholder="Apellidos"
+                         id="lastName"
+                         title="Los apellidos solo pueden contener letras"
+                         pattern="[A-Za-zÑñÁÉÍÓÚáéíóú ]{1,}"
+                         required data-validation-required-message="Por favor ingrese los apellidos">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -128,10 +132,12 @@
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <label>Usuario</label>
                   <input type="text"
-                    class="form-control"
-                    placeholder="Usuario"
-                    id="user"
-                    required data-validation-required-message="Por favor ingrese un nombre de usuario">
+                         class="form-control"
+                         placeholder="Usuario"
+                         id="user"
+                         title="El nombre de usuario solo puede contener letras y números"
+                         pattern="[A-Za-z0-9]{1,}"
+                         required data-validation-required-message="Por favor ingrese el nombre de usuario">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -140,10 +146,12 @@
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <label>Contraseña</label>
                   <input type="password"
-                    class="form-control"
-                    placeholder="Contraseña"
-                    id="password"
-                    required data-validation-required-message="Por favor ingrese una contraseña">
+                         class="form-control"
+                         placeholder="Contraseña"
+                         id="password"
+                         title="La contraseña debe tener al menos 6 caracteres y no contener &quot; ' \ o -"
+                         pattern="[a-zA-Z0-9!$%^&*()_+|~={}\[\]:;<>?,./@]{6,}"
+                         required data-validation-required-message="Por favor ingrese la contraseña">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>

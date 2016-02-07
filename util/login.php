@@ -28,13 +28,15 @@
       // de la columna.
       $row = mysqli_fetch_array($claveUsuario, MYSQLI_ASSOC);
 
-      // Se guarda el nombre del usuario en un arreglo dividido por espacios.
+      // Se guarda el nombre y el apellido del usuario en arreglos, cada uno
+      // dividido por espacios.
       $nombre = explode(" ", $row["nombre_admin"]);
+      $apellido = explode(" ", $row["apellido_admin"]);
 
       // Se guardan dos variables de sesión que sirven para saber si el
       // usuario esta logueado.
       $_SESSION["autentica"] = "SI";
-      $_SESSION["usuarioActual"] = $nombre[0] ." " .$row["apellido_admin"];
+      $_SESSION["usuarioActual"] = $nombre[0] ." " .$apellido[0];
 
       // Libera la serie de resultados.
       mysqli_free_result($result);

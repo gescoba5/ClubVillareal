@@ -6,15 +6,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Panel de administración del Club Villareal Medellín">
-    <meta name="author" content="Giovanny Escobar Uribe">
-    
+    <meta name="Description" content="Panel de administración del Club Villareal Medellín">
+    <meta name="Author" content="Giovanny Escobar Uribe">
+
     <title>Club Villareal Medellín</title>
 
-    <link rel="shortcut icon" type="image/png" href="../favicon.png" />
-    
+    <link href="../favicon.png" type="image/png" rel="shortcut icon" />
+
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link href="../css/freelancer.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
@@ -40,7 +40,7 @@
           </button>
 
           <a class="navbar-brand" href="admin.php">
-            <img alt="logo" src="../img/logo_brand.png" class="img-brand" style="margin-top: -20px">
+            <img alt="logo" src="../img/logo_brand.png" class="img-brand">
           </a>
           <a class="navbar-brand logo-brand" href="admin.php">Panel Villareal</a>
         </div>
@@ -51,11 +51,11 @@
             <li class="page-scroll">
               <a href="matriculas.php">Matrículas</a>
             </li>
-            
+
             <li class="page-scroll">
               <a href="documentos.php">Documentos</a>
             </li>
-            
+
             <li class="page-scroll active">
               <a href="consultas.php">Consultas</a>
             </li>
@@ -69,12 +69,12 @@
             </li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right nombre">
+          <ul class="nav navbar-nav navbar-right divNombre">
             <div>
-              <a href="#" style="color: #2C3E50">
+              <a href="#" class="vinculo">
                 <strong><?php echo $_SESSION["usuarioActual"];?></strong>
               </a><br>
-              <a href="../util/logout.php">Salir</a>
+              <a class="salida vinculo" href="../util/logout.php">Salir</a>
             </div>
           </ul>
         </div>
@@ -93,11 +93,11 @@
         </div>
       </div>
     </section>
-    
+
     <div class="container" style="margin-top: -70px">
       
     </div>
-    
+
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
 
@@ -112,5 +112,4 @@
     <!-- Custom Theme JavaScript -->
     <script src="../js/freelancer.js"></script>
   </body>
-  
 </html>

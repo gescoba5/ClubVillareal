@@ -11,7 +11,7 @@
 
     <title>Club Villareal Medellín</title>
 
-    <link rel="shortcut icon" type="image/png" href="../favicon.png" />
+    <link href="../favicon.png" type="image/png" rel="shortcut icon" />
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 

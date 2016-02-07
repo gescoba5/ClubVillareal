@@ -106,12 +106,50 @@
             //                                                   PATTERN
             // ---------------------------------------------------------
             if ($this.attr("pattern") !== undefined) {
-              message = "Not in the expected format<!-- data-validation-pattern-message to override -->";
-              if ($this.data("validationPatternMessage")) {
-                message = $this.data("validationPatternMessage");
+              var id = $(this).attr("id");
+              if ((id == "name") || (id == "lastName") || (id == "eps") || (id == "acudiente")) {
+                message = "No se permiten caracteres especiales ni números<!-- data-validation-pattern-message to override -->";
+                if ($this.data("validationPatternMessage")) {
+                  message = $this.data("validationPatternMessage");
+                }
+                $this.data("validationPatternMessage", message);
+                $this.data("validationPatternRegex", $this.attr("pattern"));
+              } else if (id == "birth") {
+                message = "El formato de la fecha debe ser dd/mm/aaaa<!-- data-validation-pattern-message to override -->";
+                if ($this.data("validationPatternMessage")) {
+                  message = $this.data("validationPatternMessage");
+                }
+                $this.data("validationPatternMessage", message);
+                $this.data("validationPatternRegex", $this.attr("pattern"));
+              } else if (id == "address") {
+                message = "Solo se admiten letras, números y los signos - y #<!-- data-validation-pattern-message to override -->";
+                if ($this.data("validationPatternMessage")) {
+                  message = $this.data("validationPatternMessage");
+                }
+                $this.data("validationPatternMessage", message);
+                $this.data("validationPatternRegex", $this.attr("pattern"));
+              } else if ((id == "tel") || (id == "telAcudiente") || (id == "docId")) {
+                message = "Solo se admiten números<!-- data-validation-pattern-message to override -->";
+                if ($this.data("validationPatternMessage")) {
+                  message = $this.data("validationPatternMessage");
+                }
+                $this.data("validationPatternMessage", message);
+                $this.data("validationPatternRegex", $this.attr("pattern"));
+              } else if (id == "user") {
+                message = "Solo se admiten letras y números<!-- data-validation-pattern-message to override -->";
+                if ($this.data("validationPatternMessage")) {
+                  message = $this.data("validationPatternMessage");
+                }
+                $this.data("validationPatternMessage", message);
+                $this.data("validationPatternRegex", $this.attr("pattern"));
+              } else if (id == "password") {
+                message = "Mínimo 6 caracteres y no contener comillas simples, dobles o el signo menos<!-- data-validation-pattern-message to override -->";
+                if ($this.data("validationPatternMessage")) {
+                  message = $this.data("validationPatternMessage");
+                }
+                $this.data("validationPatternMessage", message);
+                $this.data("validationPatternRegex", $this.attr("pattern"));
               }
-              $this.data("validationPatternMessage", message);
-              $this.data("validationPatternRegex", $this.attr("pattern"));
             }
             // ---------------------------------------------------------
             //                                                       MAX
@@ -141,7 +179,7 @@
             //                                                 MAXLENGTH
             // ---------------------------------------------------------
             if ($this.attr("maxlength") !== undefined) {
-              message = "Too long: Maximum of '" + $this.attr("maxlength") + "' characters<!-- data-validation-maxlength-message to override -->";
+              message = "Demasiado largo: Máximo '" + $this.attr("maxlength") + "' caracteres<!-- data-validation-maxlength-message to override -->";
               if ($this.data("validationMaxlengthMessage")) {
                 message = $this.data("validationMaxlengthMessage");
               }
@@ -183,7 +221,7 @@
             //                                                     EMAIL
             // ---------------------------------------------------------
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
-              message = "Not a valid email address<!-- data-validator-validemail-message to override -->";
+              message = "No es una dirección de email válida<!-- data-validator-validemail-message to override -->";
               if ($this.data("validationValidemailMessage")) {
                 message = $this.data("validationValidemailMessage");
               } else if ($this.data("validationEmailMessage")) {

@@ -142,16 +142,6 @@ input {
   }
 }
 
-.gmap {
-  text-align: left;
-  color: #000;
-}
-
-#gmap_canvas img {
-  max-width: none !important;
-  background: none !important;
-}
-
 .divNombre {
   padding: 10px 10px 0px;
   font-size: 12px;
@@ -164,4 +154,59 @@ input {
 .vinculo:hover {
   color: #2C3E50;
   text-decoration: none;
+}
+
+/* ============================================================
+  Mapa Google
+============================================================ */
+
+.gmap {
+  text-align: left;
+  color: #000;
+}
+
+#gmap_canvas img {
+  max-width: none !important;
+  background: none !important;
+}
+
+/* ============================================================
+  Boton Select
+============================================================ */
+
+.btn-select {
+  color: #ACB6C0;
+  background-color: #FFF;
+  border-color: #FFF;
+  margin-left: -15px !important;
+  margin-top: -5px;
+}
+
+.btn-select:hover, .btn-select:focus {
+    color: #2C3E50;
+}
+
+.bs-caret {
+  color: #1B70B7;
+}
+
+.open {
+  margin-left: -15px;
+}
+
+.pull-left {
+  font-size: 1.5em;
+  opacity: 1;
+}
+
+.dropdown-menu {
+  margin-top: 7px;
+}
+
+.dropup .dropdown-menu {
+  margin-bottom: 7px;
+}
+
+.has-error .bootstrap-select .dropdown-toggle, .error .bootstrap-select .dropdown-toggle {
+  border-color: #FFF !important;
 }
